@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+.link-list {
+  display: flex;
+  gap: 50px;
+
+  a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    &.active {
+      color: $primary-color;
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+}

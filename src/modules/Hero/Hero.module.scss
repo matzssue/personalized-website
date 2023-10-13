@@ -1,0 +1,116 @@
+@import "/src/styles/variables";
+
+#hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80vh;
+  width: 100%;
+  h1,
+  p {
+    font-family: $secondary-font !important;
+  }
+  h1 {
+    font-size: clamp(2rem, 8vw, 5rem);
+    text-wrap: nowrap;
+    z-index: 2;
+  }
+
+  p {
+    font-size: clamp(1rem, 5vw, 4rem);
+    text-wrap: nowrap;
+  }
+
+  .toggle-button {
+    background-color: $primary-color;
+    color: $secondary-text-color;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 7px 6px 20px 1px $primary-color;
+    cursor: pointer;
+    &:disabled {
+      color: rgb(45, 45, 45);
+      cursor: wait;
+    }
+  }
+  .lightsaber {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    height: auto;
+    width: 90%;
+    padding: 0 2rem;
+    z-index: 1;
+
+    &.dark {
+      animation: swingSword 1s forwards ease-in-out;
+      @keyframes swingSword {
+        0% {
+          transform: translateX(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateX(100px);
+        }
+        100% {
+          transform: translate(100px) rotate(180deg);
+          filter: hue-rotate(130deg);
+        }
+      }
+    }
+    &.light {
+      animation: swingSwordReverse 1s forwards ease-in-out;
+
+      @keyframes swingSwordReverse {
+        0% {
+          transform: translateX(100px) rotate(180deg);
+          filter: hue-rotate(130deg);
+        }
+        50% {
+          transform: translateX(-100px) rotate(180deg);
+        }
+        100% {
+          transform: translate(0px) rotate(0deg);
+          filter: hue-rotate(0deg);
+        }
+      }
+    }
+  }
+}
+// &.light {
+//   animation: swingSword 1s forwards linear;
+//   @keyframes swingSword {
+//     0% {
+//       transform: translateX(0px) rotate(0deg);
+//     }
+//     50% {
+//       transform: translateX(300px)
+//     }
+//     100% {
+//       transform: translate(400px) rotate(180deg);
+//       filter: hue-rotate(130deg);
+//     }
+//   }
+// }
+// &.dark {
+//   animation: swingSwordReverse 1s forwards ease-in-out;
+
+//   @keyframes swingSwordReverse {
+//     0% {
+//       transform: translateX(400px) rotate(180deg);
+//       filter: hue-rotate(130deg);
+//     }
+//     50% {
+//       transform: translateX(300px)
+//     }
+//     100% {
+//       transform: translate(0px) rotate(0deg);
+//       filter: hue-rotate(0deg);
+//     }
+//   }
+// }
