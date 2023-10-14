@@ -1,0 +1,17 @@
+@import "/src/styles/mixins";
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 2rem;
+  height: 71.4vh;
+  @include glass-container(15px);
+  padding: 1rem;
+  .description {
+    font-size: 1.5rem;
+  }
+}
+.loading {
+  height: 71.4vh;
+}

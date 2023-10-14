@@ -1,0 +1,24 @@
+@import "/src/styles/mixins";
+
+#spaceships-gallery {
+  display: flex;
+  flex-direction: column;
+
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    @include glass-container(15px);
+  }
+  figure {
+    figcaption {
+      @include glass-container(6px);
+      padding: 0.5rem;
+    }
+  }
+  img {
+    border-radius: 1rem;
+  }
+}

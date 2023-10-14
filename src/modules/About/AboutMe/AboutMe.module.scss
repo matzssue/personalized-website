@@ -1,0 +1,13 @@
+@import "/src/styles/mixins";
+#about-me {
+  .name {
+    font-size: 3rem;
+  }
+  .description {
+    @include glass-container(15px);
+    padding: 1rem;
+    span {
+      line-height: 1.5;
+    }
+  }
+}

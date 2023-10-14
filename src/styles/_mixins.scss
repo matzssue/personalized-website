@@ -1,0 +1,8 @@
+@mixin glass-container($radius) {
+  background: #ffffff13;
+  border-radius: $radius;
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid #ffffff5e;
+}
