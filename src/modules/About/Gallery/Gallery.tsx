@@ -1,18 +1,13 @@
-import styles from "./Gallery.module.scss";
-import { spaceshipImages } from "../../../constants/spaceshipsImages";
+import { ImageSlider } from '../../../common/ImageSlider/ImageSlider';
+import { spaceshipImages } from '../../../constants/spaceshipsImages';
 
-export const Gallery = () => {
-  return (
-    <section id={styles["spaceships-gallery"]}>
-      <h2>Gallery</h2>
-      <div className={styles.images}>
-        {spaceshipImages.map(({ alt, img, title }) => (
-          <figure>
-            <img loading="lazy" height={"200px"} src={img} alt={alt} />
-            <figcaption>{title}</figcaption>
-          </figure>
-        ))}
-      </div>
-    </section>
-  );
-};
+import styles from './Gallery.module.scss';
+
+export const Gallery = () => (
+  <section id={styles['spaceships-gallery']}>
+    <h2>Gallery</h2>
+    <div className={styles.images}>
+      <ImageSlider sliderData={spaceshipImages} />
+    </div>
+  </section>
+);

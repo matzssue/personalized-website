@@ -1,4 +1,5 @@
-@import "/src/styles/mixins";
+@import '/src/styles/mixins';
+@import '/src/styles/variables';
 
 #spaceships-gallery {
   display: flex;
@@ -7,18 +8,18 @@
   .images {
     display: flex;
     flex-wrap: wrap;
-
     align-items: center;
     justify-content: center;
+    height: 500px;
+    padding: 2rem 1.5rem;
     @include glass-container(15px);
   }
-  figure {
-    figcaption {
-      @include glass-container(6px);
-      padding: 0.5rem;
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+  #spaceships-gallery {
+    .images {
+      height: 350px;
     }
-  }
-  img {
-    border-radius: 1rem;
   }
 }
