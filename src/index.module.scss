@@ -1,8 +1,8 @@
-@import "/src/styles/variables";
+@import '/src/styles/variables';
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -20,9 +20,11 @@ body {
   text-size-adjust: none;
   color: whitesmoke;
 }
+
 body {
-  line-height: 1;
+  line-height: 1.1;
 }
+
 h1,
 h2,
 h3,
@@ -46,6 +48,7 @@ ul {
   padding: 0;
   margin: 0;
 }
+
 a {
   text-decoration: none;
 }
