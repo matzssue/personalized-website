@@ -1,19 +1,51 @@
+@import '../../styles/variables';
+
 #informations {
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     justify-content: center;
 
     li {
-      background: rgba(255, 255, 255, 0.076);
+      background: #ffffff13;
       border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 30px #0000001a;
       backdrop-filter: blur(3.5px);
       -webkit-backdrop-filter: blur(3.5px);
-      border: 1px solid rgba(255, 255, 255, 0.37);
+      border: 1px solid #ffffff5e;
       padding: 1rem;
-      width: 300px;
+
+      p {
+        text-align: center;
+        color: $primary-color;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 1rem 0;
+      }
+
+      span {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $breakpoint-large) {
+  #informations {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+  #informations {
+    h2 {
+      text-align: center;
+    }
+    ul {
+      grid-template-columns: 1fr;
     }
   }
 }

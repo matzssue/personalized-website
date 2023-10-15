@@ -1,16 +1,48 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .link-list {
   display: flex;
   gap: 50px;
 
   a {
-    font-weight: bold;
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: whitesmoke;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    img {
+      display: none;
+    }
+
     &.active {
       color: $primary-color;
       border-bottom: 1px solid $primary-color;
+
+      img {
+        display: inline-block;
+        fill: white;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $breakpoint-large) {
+  .link-list {
+    gap: 30px;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+  .link-list {
+    gap: 20px;
+
+    a {
+      font-size: 1rem;
     }
   }
 }

@@ -11,3 +11,9 @@
     background-color: $primary-hover-color;
   }
 }
+@media only screen and (max-width: $breakpoint-small) {
+  .nav-button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
