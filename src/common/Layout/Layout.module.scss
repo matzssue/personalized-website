@@ -1,14 +1,17 @@
+@import '/src/styles/variables';
+
 .box {
+  position: relative;
   width: 100%;
+  min-height: 100vh;
   height: auto;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  background-image: url("../../assets/4.jpg");
+  background-image: url('../../assets/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  padding: 0;
+  margin: 0;
+
   header {
     display: flex;
     align-items: center;
@@ -16,24 +19,86 @@
     position: sticky;
     top: 0;
     height: 7vh;
-    padding: 0 10rem;
     background-color: #3232328b;
+    padding: 0 10rem;
     -webkit-box-shadow: 0px 10px 11px 5px #3232328b;
     -moz-box-shadow: 0px 10px 11px 5px #3232328b;
     box-shadow: 0px 10px 11px 5px #3232328b;
     z-index: 3;
   }
+
   main {
     max-width: 1000px;
     height: auto;
-    padding-top: 100px;
     margin: 0 auto;
+    padding: 100px 1rem 0 1rem;
+  }
+
+  .bb8-container {
+    position: fixed;
+    bottom: -300px;
+    left: -120px;
+    width: auto;
+    overflow: hidden;
+    transition: left 0.8s ease;
+
+    &.hidden {
+      left: -400px;
+    }
+  }
+
+  .toggle-image-button {
+    position: fixed;
+    border: none;
+    text-wrap: wrap;
+    background-color: transparent;
+    bottom: 180px;
+    left: 100px;
+    transition: left 0.8s ease;
+
+    svg {
+      height: 50px;
+      width: 50px;
+      fill: #f5f5f5cd;
+    }
+
+    cursor: pointer;
+    &.hidden {
+      left: -30px;
+    }
   }
 
   footer {
     text-align: center;
     padding: 2rem 0;
     margin-top: 1rem;
-    border-top: 5px dotted rgba(220, 220, 220, 0.711);
+    border-top: 5px dotted #dcdcdcb5;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-large) {
+  .box {
+    header {
+      padding: 0 3rem;
+      .name {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $breakpoint-medium) {
+  .box {
+    header {
+      .name {
+        font-size: 0.7rem;
+        text-wrap: wrap;
+      }
+    }
+    .bb8-container {
+      display: none;
+    }
+    .toggle-image-button {
+      display: none;
+    }
   }
 }
