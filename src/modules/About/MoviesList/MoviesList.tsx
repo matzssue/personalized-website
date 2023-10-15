@@ -1,15 +1,13 @@
-import { NavLink } from "react-router-dom";
-import styles from "./MoviesList.module.scss";
-import { useQuery } from "@tanstack/react-query";
-import { getMovies } from "../../../utils/getMovies";
-import { LoadingSpinner } from "../../../common/LoadingSpinner/LoadingSpinner";
+import { useQuery } from '@tanstack/react-query';
+
+import { LoadingSpinner } from '../../../common/LoadingSpinner/LoadingSpinner';
+import { NavButton } from '../../../common/NavButton/NavButton';
+import { getMovies } from '../../../utils/getMovies';
+
+import styles from './MoviesList.module.scss';
 
 export const MoviesList = () => {
-  const {
-    data: movies,
-    isLoading,
-    isError,
-  } = useQuery(["movies"], async () => await getMovies());
+  const { data: movies, isError, isLoading } = useQuery(['movies'], async () => await getMovies());
 
   return (
     <section id={styles.movies}>
@@ -17,11 +15,11 @@ export const MoviesList = () => {
       {isError && <p>Sorry, something went wrong. Please try again later</p>}
       <ul>
         {!isLoading && movies ? (
-          movies.map(({ title, description, id }) => (
+          movies.map(({ description, id, title }) => (
             <li key={id} className={styles.movie}>
               <p className={styles.title}>{title}</p>
               <span className={styles.description}>{description}</span>
-              <NavLink to={`/movies/${id}`}>Read more</NavLink>
+              <NavButton text='Read more' to={`/movies/${id}`} />
             </li>
           ))
         ) : (

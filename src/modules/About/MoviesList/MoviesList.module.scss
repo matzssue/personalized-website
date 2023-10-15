@@ -1,37 +1,30 @@
-@import "/src/styles/mixins";
-@import "/src/styles/variables";
+@import '/src/styles/mixins';
+@import '/src/styles/variables';
 #movies {
   ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     .movie {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      @include glass-container(15px);
       padding: 1rem;
+      @include glass-container(15px);
+
       .title {
         color: $primary-color;
         font-weight: bolder;
         margin: 0.5rem 0;
-        background-color: rgba(39, 39, 39, 0.807);
+        background-color: #272727ce;
         text-align: center;
         font-size: 1.3rem;
       }
+
       .description {
         font-family: $primary-font;
         line-height: 1.2;
-      }
-      a {
-        text-align: center;
-        background-color: $primary-color;
-        padding: 1rem;
-        color: black;
-        font-weight: bold;
-        &:hover {
-          background-color: $primary-hover-color;
-        }
       }
     }
   }
