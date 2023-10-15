@@ -7,8 +7,6 @@ import { AboutPage } from './pages/AboutPage';
 import { Home } from './pages/Home';
 import { Movie } from './pages/Movie';
 
-import './App.module.scss';
-
 const queryClient = new QueryClient({
   queryCache: new QueryCache(),
   defaultOptions: {
