@@ -1,8 +1,9 @@
 {
   "name": "personalized-website",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://matzssue.github.io/personalized-website/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
