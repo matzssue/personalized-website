@@ -1,10 +1,10 @@
 type MoviesData = {
-  title: string;
-  id: number;
   description: string;
   director: string;
-  releaseDate: string;
+  id: number;
   producer: string;
+  releaseDate: string;
+  title: string;
 };
 
 export const getMovieDetails = async (id: string | undefined) => {
@@ -15,11 +15,11 @@ export const getMovieDetails = async (id: string | undefined) => {
     console.log(data);
     const movieData: MoviesData = {
       id: data.episode_id,
-      title: data.title,
       director: data.director,
+      title: data.title,
       producer: data.producer,
-      releaseDate: data.release_date,
       description: data.opening_crawl,
+      releaseDate: data.release_date,
     };
 
     return movieData;

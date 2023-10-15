@@ -1,21 +1,18 @@
 type MoviesData = {
-  title: string;
-  id: number;
   description: string;
+  id: number;
+  title: string;
 };
 
 export const getMovies = async () => {
   try {
-    const response = await fetch("https://swapi.dev/api/films");
+    const response = await fetch('https://swapi.dev/api/films');
     const data = await response.json();
-    console.log(data);
-    const moviesData: MoviesData[] = data.results.map((ele: any) => {
-      return {
-        title: ele.title,
-        id: ele.episode_id,
-        description: ele.opening_crawl,
-      };
-    });
+    const moviesData: MoviesData[] = data.results.map((ele: any) => ({
+      description: ele.opening_crawl,
+      id: ele.episode_id,
+      title: ele.title,
+    }));
 
     return moviesData;
   } catch (err) {

@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import styles from './ImageSlider.module.scss';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa';
+
 import { SpaceShip } from '../../constants/spaceshipsImages';
+
+import styles from './ImageSlider.module.scss';
 
 export const ImageSlider = ({ sliderData }: { sliderData: SpaceShip[] }) => {
   const [current, setCurrent] = useState(0);
@@ -23,18 +25,16 @@ export const ImageSlider = ({ sliderData }: { sliderData: SpaceShip[] }) => {
     <div className={styles.slider}>
       <FaArrowAltCircleLeft className={styles['left-arrow']} onClick={prevSlide} />
       <FaArrowAltCircleRight className={styles['right-arrow']} onClick={nextSlide} />
-      {sliderData.map(({ img, title, alt }, index) => {
-        return (
-          <div className={`${styles.slide} ${index === current ? styles.active : ''}`} key={index}>
-            {index === current && (
-              <>
-                <p className={styles.title}>{title}</p>
-                <img src={img} alt={alt} className={styles.image} />
-              </>
-            )}
-          </div>
-        );
-      })}
+      {sliderData.map(({ alt, img, title }, index) => (
+        <div key={index} className={`${styles.slide} ${index === current ? styles.active : ''}`}>
+          {index === current && (
+            <>
+              <p className={styles.title}>{title}</p>
+              <img alt={alt} className={styles.image} src={img} />
+            </>
+          )}
+        </div>
+      ))}
     </div>
   );
 };
