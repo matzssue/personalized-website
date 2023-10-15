@@ -1,11 +1,13 @@
-import styles from "./Hero.module.scss";
-import lightsaber from "../../assets/star-wars-2369317_1280.png";
-import { useState, useEffect } from "react";
-import { useThemeContext } from "../../context/ThemeSelectorContext";
+import { useEffect, useState } from 'react';
+
+import lightsaber from '../../assets/lightsaber.png';
+import { useThemeContext } from '../../context/ThemeSelectorContext';
+
+import styles from './Hero.module.scss';
+
 export const Hero = () => {
-  const { toggleTheme, themeName } = useThemeContext();
+  const { isFirstClick, setIsFirstClick, themeName, toggleTheme } = useThemeContext();
   const [isButtonDisabled, setButtonDisabled] = useState(false);
-  const [isFirstClick, setIsFirstClick] = useState(true);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -21,26 +23,24 @@ export const Hero = () => {
     setButtonDisabled(true);
   };
 
-  const currentMode = `Switch to ${
-    themeName === "dark" ? "light" : "dark"
-  } force`;
+  const currentMode = `Switch to ${themeName === 'dark' ? 'light' : 'dark'} force`;
 
   return (
     <section id={styles.hero}>
       <h1>Mateusz Kluska</h1>
-      <p>FrontEnd Developer</p>
+      <img
+        alt='lightsaber'
+        className={`${styles.lightsaber} ${!isFirstClick && styles[themeName]}`}
+        src={lightsaber}
+      />
+      <h2>FrontEnd Developer</h2>
       <button
-        className={styles["toggle-button"]}
+        className={styles['toggle-button']}
         disabled={isButtonDisabled}
         onClick={() => handleButtonClick()}
       >
-        {isButtonDisabled ? "Loading force . . . " : currentMode}
+        {isButtonDisabled ? 'Loading force . . . ' : currentMode}
       </button>
-      <img
-        alt="lightsaber"
-        className={`${styles.lightsaber} ${!isFirstClick && styles[themeName]}`}
-        src={lightsaber}
-      ></img>
     </section>
   );
 };
