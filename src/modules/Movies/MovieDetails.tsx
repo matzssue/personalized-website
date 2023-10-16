@@ -26,7 +26,6 @@ export const MovieDetails = () => {
   const { description, director, producer, releaseDate, title } = movie;
   return (
     <div className={styles['movie-container']}>
-      {isLoading && <LoadingSpinner />}
       {isError && <p>Sorry, something went wrong. Please try again later</p>}
       <h1 className={styles.title}>{title}</h1>
       <p className={styles.information}>
