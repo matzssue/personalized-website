@@ -1,10 +1,11 @@
 import { Layout } from '../common/Layout/Layout';
 import { Hero } from '../modules/Hero/Hero';
-import { Informations } from '../modules/Informations/Informations';
+import { InterestingFacts } from '../modules/Informations/InterestingFacts';
 
-export const Home = () => (
+const Home = () => (
   <Layout>
     <Hero />
-    <Informations />
+    <InterestingFacts />
   </Layout>
 );
+export default Home;
