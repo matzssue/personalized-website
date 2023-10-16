@@ -26,6 +26,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
       <div className={`${styles['bb8-container']} ${isImageHidden ? styles.hidden : ''}`}>
         <img
           src={bb8Character}
+          alt={'bb8-character'}
           className={`${styles['bb8-image']} ${isImageHidden ? styles.hidden : ''}`}
         />
       </div>
