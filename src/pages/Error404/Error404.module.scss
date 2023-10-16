@@ -1,0 +1,24 @@
+@import '/src/styles/variables';
+
+.error404-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('/src/assets/background.webp');
+  height: 100vh;
+  color: whitesmoke;
+  h1 {
+    font-size: 5rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  a {
+    margin: 1rem;
+    color: $primary-color;
+    font-size: 1.5rem;
+  }
+}
