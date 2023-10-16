@@ -1,6 +1,6 @@
 import deathstar from '../assets/deathstar.webp';
 import falcon from '../assets/falcon.webp';
-import spaceship from '../assets/spaceship1.webp';
+import spaceship from '../assets/future-spaceship.webp';
 
 export type SpaceShip = {
   alt: string;

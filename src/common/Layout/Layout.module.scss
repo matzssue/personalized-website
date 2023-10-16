@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 100vh;
   height: auto;
-  background-image: url('../../assets/background.jpg');
+  background-image: url('../../assets/background.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -19,11 +19,11 @@
     position: sticky;
     top: 0;
     height: 7vh;
-    background-color: #3232328b;
-    padding: 0 10rem;
-    -webkit-box-shadow: 0px 10px 11px 5px #3232328b;
-    -moz-box-shadow: 0px 10px 11px 5px #3232328b;
-    box-shadow: 0px 10px 11px 5px #3232328b;
+    background-color: #111111a1;
+    padding: 0 9rem;
+    -webkit-box-shadow: 0px 10px 11px 5px #111111a1;
+    -moz-box-shadow: 0px 10px 11px 5px #111111a1;
+    box-shadow: 0px 10px 11px 5px #111111a1;
     z-index: 3;
   }
 
@@ -80,6 +80,7 @@
   .box {
     header {
       padding: 0 3rem;
+
       .name {
         font-size: 0.7rem;
       }
@@ -94,9 +95,11 @@
         text-wrap: wrap;
       }
     }
+
     .bb8-container {
       display: none;
     }
+
     .toggle-image-button {
       display: none;
     }

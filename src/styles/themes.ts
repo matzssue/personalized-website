@@ -9,7 +9,7 @@ export type Themes = Record<ThemeNames, Theme>;
 
 export const themes: Themes = {
   dark: {
-    primary: '#fd1d2078',
+    primary: '#fd1d20ad',
     primaryHover: '#fb2c2e',
   },
   light: {

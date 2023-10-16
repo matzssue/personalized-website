@@ -1,14 +1,15 @@
 @import '../../styles/variables';
 
-#informations {
+#interesting-facts {
   ul {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
 
     li {
+      flex: 1;
+      min-width: 300px;
       background: #ffffff13;
       border-radius: 16px;
       box-shadow: 0 4px 30px #0000001a;
@@ -31,21 +32,11 @@
     }
   }
 }
-@media only screen and (max-width: $breakpoint-large) {
-  #informations {
-    ul {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
 
 @media only screen and (max-width: $breakpoint-medium) {
-  #informations {
+  #interesting-facts {
     h2 {
       text-align: center;
-    }
-    ul {
-      grid-template-columns: 1fr;
     }
   }
 }
