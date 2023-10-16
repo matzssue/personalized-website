@@ -1,9 +1,9 @@
 import { starWarsInformations } from '../../constants/starWarsInformations';
 
-import styles from './Informations.module.scss';
+import styles from './InterestingFacts.module.scss';
 
-export const Informations = () => (
-  <section id={styles.informations}>
+export const InterestingFacts = () => (
+  <section id={styles['interesting-facts']}>
     <h2>Three things you should known about star wars </h2>
     <ul>
       {starWarsInformations.map(({ content, title }) => (
