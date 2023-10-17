@@ -11,7 +11,7 @@ import { Loader } from './common/Loader/Loader';
 import ErrorBoundary from './modules/ErrorBoundary/ErrorBoundary';
 import { Error404 } from './pages/Error404/Error404';
 
-const LazyAbout = lazy(() => import('./pages/AboutPage'));
+const LazyAbout = lazy(() => import('./pages/AboutPage/AboutPage'));
 const LazyMovie = lazy(() => import('./pages/Movie'));
 
 const queryClient = new QueryClient({

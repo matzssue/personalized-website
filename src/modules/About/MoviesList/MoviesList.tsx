@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { LoadingSpinner } from '../../../common/LoadingSpinner/LoadingSpinner';
 import { NavButton } from '../../../common/NavButton/NavButton';
-import { getMovies } from '../../../utils/getMovies';
+import { getMovies } from '../../../api/getMovies';
 
 import styles from './MoviesList.module.scss';
 

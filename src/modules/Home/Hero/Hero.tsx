@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import lightsaber from '../../assets/lightsaber.png';
-import { useThemeContext } from '../../context/ThemeSelectorContext';
+import lightsaber from '../../../assets/lightsaber.png';
+import { useThemeContext } from '../../../context/ThemeSelectorContext';
 
 import styles from './Hero.module.scss';
 

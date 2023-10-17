@@ -1,6 +1,6 @@
 import { Layout } from '../common/Layout/Layout';
-import { Hero } from '../modules/Hero/Hero';
-import { InterestingFacts } from '../modules/Informations/InterestingFacts';
+import { Hero } from '../modules/Home/Hero/Hero';
+import { InterestingFacts } from '../modules/Home/Informations/InterestingFacts';
 
 const Home = () => (
   <Layout>
