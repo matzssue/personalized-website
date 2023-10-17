@@ -14,7 +14,9 @@ export const MovieDetails = () => {
     data: movie,
     isError,
     isLoading,
-  } = useQuery(['movie', movieId], async () => await getMovieDetails(movieId));
+  } = useQuery(['movie', movieId], async () => await getMovieDetails(movieId), {
+    enabled: !!movieId,
+  });
 
   if (isLoading)
     return (
