@@ -1,11 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import styles from './NavLinks.module.scss';
-
-type NavigationLinks = {
-  link: string;
-  linkName: string;
-};
+import { NavigationLinks } from '../../constants/navigationLinks';
 
 export const NavLinks = ({ navigationLinks }: { navigationLinks: NavigationLinks[] }) => (
   <ul className={styles['link-list']}>
