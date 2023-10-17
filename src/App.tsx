@@ -1,15 +1,13 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import { ThemeContextProvider } from './context/ThemeSelectorContext';
-
-import Home from './pages/Home';
-
-import { Suspense, lazy } from 'react';
 import { Loader } from './common/Loader/Loader';
+import { ThemeContextProvider } from './context/ThemeSelectorContext';
 import ErrorBoundary from './modules/ErrorBoundary/ErrorBoundary';
 import { Error404 } from './pages/Error404/Error404';
+import Home from './pages/Home';
 
 const LazyAbout = lazy(() => import('./pages/AboutPage/AboutPage'));
 const LazyMovie = lazy(() => import('./pages/Movie'));

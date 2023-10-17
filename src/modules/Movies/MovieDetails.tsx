@@ -1,10 +1,10 @@
 import { useParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 
+import { getMovieDetails } from '../../api/getMovieDetails';
 import { LoadingSpinner } from '../../common/LoadingSpinner/LoadingSpinner';
 import { NavButton } from '../../common/NavButton/NavButton';
 
-import { getMovieDetails } from '../../api/getMovieDetails';
 import styles from './MovieDetails.module.scss';
 
 export const MovieDetails = () => {
