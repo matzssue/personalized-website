@@ -1,4 +1,4 @@
-import { interestingFacts } from '../../constants/InterestingFacts';
+import { interestingFacts } from '../../constants/interestingFacts';
 
 import styles from './InterestingFacts.module.scss';
 
