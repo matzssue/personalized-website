@@ -53,11 +53,11 @@
 
   .toggle-image-button {
     position: fixed;
-    border: none;
-    text-wrap: wrap;
-    background-color: transparent;
     bottom: 180px;
     left: 100px;
+    background-color: transparent;
+    text-wrap: wrap;
+    border: none;
     transition: left 0.8s ease;
 
     svg {
