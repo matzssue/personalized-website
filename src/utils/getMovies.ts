@@ -17,7 +17,7 @@ export const getMovies = async () => {
     return moviesData;
   } catch (err) {
     if (err instanceof Error) {
-      throw new Error();
+      throw new Error(`Error while fetching movie details: ${err.message}`);
     }
   }
 };

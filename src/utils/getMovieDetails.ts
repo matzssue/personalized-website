@@ -8,7 +8,6 @@ type MoviesData = {
 };
 
 export const getMovieDetails = async (id: string | undefined) => {
-  if (!id) return;
   try {
     const response = await fetch(`https://swapi.dev/api/films/${id}`);
     const data = await response.json();
@@ -25,7 +24,7 @@ export const getMovieDetails = async (id: string | undefined) => {
     return movieData;
   } catch (err) {
     if (err instanceof Error) {
-      throw new Error();
+      throw new Error(`Error while fetching movies: ${err.message}`);
     }
   }
 };
