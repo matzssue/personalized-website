@@ -1,4 +1,4 @@
-export const starWarsInformations = [
+export const interestingFacts = [
   {
     title: 'The original Star Wars concept was inspired by Joseph Campbell.',
     content:

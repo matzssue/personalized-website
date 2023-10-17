@@ -8,7 +8,7 @@ export type SpaceShip = {
   title: string;
 };
 
-export const spaceshipImages: SpaceShip[] = [
+export const spaceshipImages = [
   { img: deathstar, title: 'Death Star', alt: 'Death Star' },
   { img: falcon, title: 'Falcon Spaceship', alt: 'Falcon spaceship' },
   { img: spaceship, title: 'Future Spaceship', alt: 'Future Spaceship' },
