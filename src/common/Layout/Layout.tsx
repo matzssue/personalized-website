@@ -7,6 +7,7 @@ import { useThemeContext } from '../../context/ThemeSelectorContext';
 import { NavLinks } from '../NavLinks/NavLinks';
 
 import styles from './Layout.module.scss';
+import { NavLink } from 'react-router-dom';
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   const { isImageHidden, toggleHideImage } = useThemeContext();
@@ -14,7 +15,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <div className={styles.box}>
       <header>
-        <p className={styles.name}>Mateusz Kluska - Portfolio</p>
+        <NavLink to={'/'}>Mateusz K. Portfolio</NavLink>
         <nav>
           <NavLinks navigationLinks={navigationLinks} />
         </nav>
