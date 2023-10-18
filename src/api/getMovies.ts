@@ -1,3 +1,5 @@
+import { starWarsUrl } from '../constants/stawWarsUrl';
+
 type MoviesData = {
   description: string;
   id: number;
@@ -6,7 +8,7 @@ type MoviesData = {
 
 export const getMovies = async () => {
   try {
-    const response = await fetch('https://swapi.dev/api/films');
+    const response = await fetch(`${starWarsUrl}/films`);
     const data = await response.json();
     const moviesData: MoviesData[] = data.results.map((ele: any) => ({
       description: ele.opening_crawl,

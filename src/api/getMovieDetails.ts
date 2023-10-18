@@ -1,3 +1,5 @@
+import { starWarsUrl } from '../constants/stawWarsUrl';
+
 type MoviesData = {
   description: string;
   director: string;
@@ -9,7 +11,7 @@ type MoviesData = {
 
 export const getMovieDetails = async (id: string | undefined) => {
   try {
-    const response = await fetch(`https://swapi.dev/api/films/${id}`);
+    const response = await fetch(`${starWarsUrl}/films/${id}`);
     const data = await response.json();
     console.log(data);
     const movieData: MoviesData = {
